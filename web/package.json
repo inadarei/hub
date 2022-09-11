@@ -37,6 +37,7 @@
     "semver": "^7.3.7",
     "tinycolor2": "^1.4.2",
     "unified": "^9.2.1",
+    "weak-napi": "^2.0.2",
     "yaml": "2.0.1"
   },
   "devDependencies": {
