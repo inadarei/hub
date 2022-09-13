@@ -126,7 +126,7 @@ jobs:
         run: yarn lint
       - name: Run frontend tests
         working-directory: ./web
-        run: yarn test --runInBand --detectOpenHandles --watchAll=false --passWithNoTests --verbose --detectLeaks
+        run: yarn test --logHeapUsage --runInBand --watchAll=false --passWithNoTests --verbose
 
   tests-widget:
     runs-on: ubuntu-20.04
@@ -153,7 +153,7 @@ jobs:
         run: yarn lint
       - name: Run widget tests
         working-directory: ./widget
-        run: yarn test --runInBand --detectOpenHandles --watchAll=false --passWithNoTests --verbose --detectLeaks
+        run: yarn test --logHeapUsage --runInBand --watchAll=false --passWithNoTests --verbose
 
   build-backend:
     runs-on: ubuntu-20.04
