@@ -1,7 +1,7 @@
 name: CodeQL
 on:
   push:
-    branches: [swagger-ui]
+    branches: [cynthia-sg/swagger-ui]
 
 permissions: read-all
 
