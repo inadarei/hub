@@ -7,7 +7,7 @@ import { Route, Router, Switch } from 'react-router-dom';
 
 import { AppCtxProvider } from '../context/AppCtx';
 import buildSearchParams from '../utils/buildSearchParams';
-import history from '../utils/history';
+import browserHistory from '../utils/history';
 import AlertController from './common/AlertController';
 import UserNotificationsController from './common/userNotifications';
 import ControlPanelView from './controlPanel';
@@ -38,7 +38,7 @@ export default function App() {
 
   return (
     <AppCtxProvider>
-      <Router history={history}>
+      <Router history={browserHistory}>
         <div className="d-flex flex-column min-vh-100 position-relative whiteBranded">
           <div className="visually-hidden visually-hidden-focusable">
             <a href="#content">Skip to Main Content</a>
