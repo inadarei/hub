@@ -1,7 +1,8 @@
 import { isUndefined } from 'lodash';
 
 const formatPathWithDots = (value: string): string => {
-  return `"${value.replace(/\./g, '\\.')}"`;
+  const r = value.replace(/\./g, '\\.');
+  return `"${r}"`;
 };
 
 const getJMESPathForValuesSchema = (value: string, currentPath?: string): string => {
