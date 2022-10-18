@@ -1,8 +1,7 @@
 import { isUndefined } from 'lodash';
 
 const formatPathWithDots = (value: string): string => {
-  const r = value.replace(/\./g, '\\.');
-  return `"${r}"`;
+  return `"${value.replace(/\./g, '\\.')}"`; // lgtm[js/client-side-unvalidated-url-redirection]
 };
 
 const getJMESPathForValuesSchema = (value: string, currentPath?: string): string => {
