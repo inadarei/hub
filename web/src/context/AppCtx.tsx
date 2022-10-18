@@ -90,7 +90,7 @@ export async function refreshUserProfile(dispatch: Dispatch<any>, redirectUrl?: 
     const currentUrl = `${window.location.pathname}${
       window.location.search !== '' ? `?${cleanLoginUrlParams(window.location.search)}` : ''
     }`;
-    if (!isUndefined(redirectUrl)) {
+    if (!isUndefined(redirectUrl) && redirectUrl.startsWith('/')) {
       if (redirectUrl === currentUrl) {
         history.replace(redirectUrl);
       } else {
